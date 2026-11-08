@@ -1,0 +1,8 @@
+// BOOT.BIN for the fractal demo (ZCU102, boot from SD card)
+// Expects fsbl.elf, system_wrapper.bit and fractal_app.elf in this folder; build: bootgen -arch zynqmp -image boot.bif -o BOOT.BIN -w on
+the_ROM_image:
+{
+    [bootloader, destination_cpu=a53-0] fsbl.elf
+    [destination_device=pl] system_wrapper.bit
+    [destination_cpu=a53-0, exception_level=el-3] fractal_app.elf
+}

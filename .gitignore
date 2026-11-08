@@ -1,0 +1,10 @@
+# all generated output (Vivado project, Vitis workspace, BOOT.BIN built from source)
+build/
+# HLS work directory and logs
+hls/fractal/
+hls/*.log
+hls/*.ppm
+*.jou
+*.log
+.Xil/
+_ide/
